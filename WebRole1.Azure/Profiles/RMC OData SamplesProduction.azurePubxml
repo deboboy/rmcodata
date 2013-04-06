@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AzureCredentials>Azpad0076QD4963</AzureCredentials>
+    <AzureHostedServiceName>rmcodata</AzureHostedServiceName>
+    <AzureHostedServiceLabel>RMC OData Samples</AzureHostedServiceLabel>
+    <AzureSlot>Production</AzureSlot>
+    <AzureEnableIntelliTrace>False</AzureEnableIntelliTrace>
+    <AzureEnableProfiling>False</AzureEnableProfiling>
+    <AzureEnableWebDeploy>True</AzureEnableWebDeploy>
+    <!--<AzureStorageAccountName>rmctests</AzureStorageAccountName>
+    <AzureStorageAccountLabel>RMCTests</AzureStorageAccountLabel>-->
+    <AzureDeploymentLabel>WebRole1.Azure</AzureDeploymentLabel>
+    <AzureSolutionConfiguration>Release</AzureSolutionConfiguration>
+    <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
+    <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <AzureEnableRemoteDesktop>True</AzureEnableRemoteDesktop>
+    <AzureDeploymentReplacementMethod>AutomaticUpgrade</AzureDeploymentReplacementMethod>
+    <AzureDeleteDeploymentOnFailure>False</AzureDeleteDeploymentOnFailure>
+    <AzureFallbackToDeleteAndRecreateIfUpgradeFails>False</AzureFallbackToDeleteAndRecreateIfUpgradeFails>
+    <AzureStorageAccountLabel>RMCODataStorage</AzureStorageAccountLabel>
+    <AzureStorageAccountName>rmcodatastorage</AzureStorageAccountName>
+  </PropertyGroup>
+</Project>

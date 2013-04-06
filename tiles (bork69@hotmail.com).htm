@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>RMC OData Sampler: Video Search</title>
+	<script src="http://research.microsoft.com/a/rmc.js"></script>
+    <script type="text/javascript">
+        function one() {
+            rmc.AddXml("downloads", "http://rmc.cloudapp.net/dataproxy.ashx?at=Videos&s=%22environmental%22&a=10", null, false);
+            rmc.AddXsl("odTransform", "odTransform.xsl");
+            rmc.GE("RMCODataOutput").innerHTML = rmc.Transform(rmc.Xml.downloads.responseXML, rmc.Xsl.odTransform);
+        }
+        function main() {
+            one();
+        }
+        // Build RMC OData search
+        function Search() {
+            var videoTerm = document.getElementById("#videoTerm").value;
+            var query = "http://odata.research.microsoft.com/odata.svc" // RMC OData base url                    + "/Videos/" // top-level resource            
+                + "?$filter=substringof('" + escape(videoTerm) + "', Description)"  // filter by search term in video description            
+        }
+        
+            
+         window.onload = main;
+	</script> 
+     <style type="text/css">
+    body {background:black; font-family:Segoe UI, Verdana, Arial; 
+              color:white}
+    h2 {font-size: 20px; padding-bottom:0px;}
+    a:link {color:White; text-decoration:underline;}
+    a:visited {color:White; text-decoration:none;}
+    #header {font-size:medium; font-weight:bold; padding-bottom:10px;}
+    #footer {background-color:Black; color:White; font-size:x-small;}
+    </style>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<div id="header">
+Microsoft Research OData Sampler
+</div>
+<form>
+<label>Search Videos:</label>
+<input id="videoTerm" size="50" /> 
+<button id="btnSearch" onclick="Search()">GO</button>
+</form>
+<div id="searchResults">
+
+</div>
+<!--<div id="RMCODataOutput"></div>--> 
+<div id="footer">
+<a href="http://mid.live.com/terms.aspx?mkt=en-us">Terms of Use</a> |
+<a href="http://m.microsoft.com/en-us/about/trademarks/trademarks.mspx">Trademarks</a> |
+<a href="http://m.microsoft.com/en-us/about/privacy/default.mspx">Privacy</a> <br />
+&#0169; 2012 Microsoft Corporation 
+</div>
+
+</body>
+
+</html>

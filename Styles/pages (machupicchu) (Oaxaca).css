@@ -1,0 +1,28 @@
+﻿    body {background:black; font-family:Segoe UI, Verdana, Arial; color:white}
+    a:link {color:White; text-decoration:underline;}
+    a:visited {color:White; text-decoration:none;}
+    #headerText {background-color: #00AEEF; position: relative; margin-bottom: 6px; font: Segoe UI, Verdana, Arial; font-weight: bold; color: white; padding: 0px; overflow: hidden; text-align: center;}
+    #nav {width: 100%;}
+    #videoSearch {width: 25%; background-color: #FF0097; float:left; text-align:center;}
+    #labPeople {width: 25%; background-color: #FF8200; float:left;  text-align:center;} 
+    #labProjects {width: 25%; background-color: #910091; float:left; text-align:center;}
+    #labPapers {width: 25%; background-color: #8CC600; float:left; text-align:center; margin-right: 0px;}
+    #mapImage {border-style: none; margin-top: 6px;} 
+    #RMCODataOutput {float:left; margin-top: 6px;}
+    #footer {background-color:Black; color:White; font-size:x-small; float:left;}
+        .Nav
+        {
+         border-style:none;
+         padding-top: 3px;
+        }
+        .resultsHeader 
+        {
+            float:left; 
+            margin-top: 6px; 
+            font: Segoe UI, Verdana, Arial; 
+            font-weight:bold;
+            background-color: #910091;
+            text-align:center; 
+            width:100%;
+         }
+    

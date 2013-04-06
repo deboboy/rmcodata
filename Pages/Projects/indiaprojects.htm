@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<title>Microsoft Research OData Sampler</title>
+	<script type="text/javascript" src="http://research.microsoft.com/a/rmc.js"></script>
+	<script type="text/javascript">
+	    function one() {
+	        rmc.AddXml("downloads", "http://rmcodata.cloudapp.net/dataproxy2.ashx?l=Labs(47183)&r=Projects", null, false);
+	        rmc.AddXsl("odTransform", "/Transforms/projectsTransform.xsl");
+	        rmc.GE("RMCODataOutput").innerHTML = rmc.Transform(rmc.Xml.downloads.responseXML, rmc.Xsl.odTransform);
+	    }
+	    function main() {
+	        one();
+	    }
+	    window.onload = main;
+	</script>
+    <link rel=StyleSheet href="/styles/pages.css" TYPE="text/css" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<a href="../../default.htm" style="text-decoration:none">
+<div id="header" class="Nav">Microsoft Research | OData Browser</div>
+</a>
+<div id="nav">
+    <a href="../people.htm" style="text-decoration:none">
+         <div id="labPeople" class="Nav">
+         people
+         </div>
+    </a>
+    <a href="../projects.htm" style="text-decoration:none">
+         <div id="labProjects" class="Nav">
+         projects
+         </div>
+    </a>
+    <a href="../papers.htm" style="text-decoration:none">
+         <div id="labPapers" class="Nav">
+         papers
+         </div>
+    </a>
+    <a href="../videos.htm" style="text-decoration:none";>
+        <div id="videoSearch" class="Nav">
+        videos
+        </div>
+    </a>
+</div>
+<div id="projectsHeader" class="resultsHeader">India</div>
+<div id="RMCODataOutput"></div>
+<div id="footer">
+<a href="http://mid.live.com/terms.aspx?mkt=en-us" style="color: black; text-decoration: underline;">Terms of Use</a> |
+<a href="http://m.microsoft.com/en-us/about/trademarks/trademarks.mspx" style="color: black; text-decoration: underline;">Trademarks</a> |
+<a href="http://m.microsoft.com/en-us/about/privacy/default.mspx" style="color: black; text-decoration: underline;">Privacy</a>
+&#0169; 2012 Microsoft Corporation 
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Microsoft Research OData Sampler</title>
+
+    <script charset="UTF-8" type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+    <script type="text/javascript">
+        var map = null;
+        function getMap() {
+            Microsoft.Maps.loadModule('Microsoft.Maps.Themes.BingTheme', { callback: function () {
+                map = new Microsoft.Maps.Map(document.getElementById('labsMap'),
+                {
+                    credentials: 'ApRMIVcGwXnunUKTAGB1VLhmF4oluGQN9foTiW0shMv8lExn5g9aZhMAe0gojd3U',
+                    theme: new Microsoft.Maps.Themes.BingTheme(),
+                    center: new Microsoft.Maps.Location(52.2, 0.1167),
+                    zoom: 2,
+                    showDashboard: false,
+                    enableSearchLogo: false,
+                    enableClickableLogo: false,
+                    showScalebar: false
+                });
+
+
+                //var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(39.9289, 116.388), { icon: "asia-lab-small.jpg" }, null);
+                var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(39.9289, 116.388), null);
+                map.entities.push(pin1);
+                //map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(39.9289, 116.388), { title: 'Asia', htmlContent:'<a href="#" onclick="titleClick1()">Asia</a>', pushpin: pin1 }));
+                map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(39.9289, 116.388), { title: 'Asia', titleClickHandler: titleClick1, pushpin: pin1 }));
+
+                var pin2 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(52.2, 0.1167), null);
+                map.entities.push(pin2);
+                map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(52.2, 0.1167), { title: 'Cambridge', titleClickHandler: titleClick2, pushpin: pin2 }));
+
+                var pin3 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(12.9833, 77.5833), null);
+                map.entities.push(pin3);
+                map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(12.9833, 77.5833), { title: 'India', titleClickHandler: titleClick3, pushpin: pin3 }));
+
+                var pin4 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(42.3646, -71.1028), null);
+                map.entities.push(pin4);
+                map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(42.3646, -71.1028), { title: 'New England', titleClickHandler: titleClick4, pushpin: pin4 }));
+
+                var pin5 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(47.6801, -122.1210), null);
+                map.entities.push(pin5);
+                map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(47.6801, -122.1210), { title: 'Redmond', titleClickHandler: titleClick5, pushpin: pin5 }));
+
+                var pin6 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(37.4192, -122.0570), null);
+                map.entities.push(pin6);
+                map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(37.4192, -122.0570), { title: 'Silicon Valley', titleClickHandler: titleClick6, pushpin: pin6 }));
+
+                var pin7 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(32.1667, 34.8333), null);
+                map.entities.push(pin7);
+                map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(32.1667, 34.8333), { title: 'Israel', titleClickHandler: titleClick7, pushpin: pin7 }));
+            }
+            });
+        }
+
+       
+        function titleClick1() {
+            location.href="/asiapeople.htm";
+        }
+
+        function titleClick2() {
+            location.href="/cambridgepeople.htm";
+        }
+
+        function titleClick3() {
+            location.href="/indiapeople.htm";
+        }
+
+        function titleClick4() {
+            location.href="/newenglandpeople.htm";
+        }
+
+        function titleClick5() {
+            location.href="/redmondpeople.htm";
+        }
+
+        function titleClick6() {
+            location.href="/svcpeople.htm";
+        }
+
+        function titleClick7() {
+            location.href="/israelpeople.htm";
+        }
+
+        window.onload = getMap;
+    </script>
+
+    <link rel=StyleSheet href="/styles/pages.css" TYPE="text/css" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<a href="default.htm" style="text-decoration:none">
+<div id="headerText" class="Nav">Microsoft Research | OData Sampler</div>
+</a>
+<div id="nav">
+    <a href="videos.htm" style="text-decoration:none";>
+        <div id="videoSearch" class="Nav">
+        videos
+        </div>
+    </a>
+    <a href="people.htm" style="text-decoration:none">
+         <div id="labPeople" class="Nav">
+         people
+         </div>
+    </a>
+    <a href="projects.htm" style="text-decoration:none">
+         <div id="labProjects" class="Nav">
+         projects
+         </div>
+    </a>
+    <a href="papers.htm" style="text-decoration:none">
+         <div id="labPapers" class="Nav">
+         papers
+         </div>
+    </a>
+</div>
+<p id="peopleHeader" style="text-align:center; width: 100%;">&nbsp;</p>
+<div id="labsMap"></div>
+<div id="footer">
+<a href="http://mid.live.com/terms.aspx?mkt=en-us">Terms of Use</a> |
+<a href="http://m.microsoft.com/en-us/about/trademarks/trademarks.mspx">Trademarks</a> |
+<a href="http://m.microsoft.com/en-us/about/privacy/default.mspx">Privacy</a> <br />
+&#0169; 2012 Microsoft Corporation 
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Microsoft Research OData Sampler: Search People</title>
+	<script type="text/javascript" src="http://research.microsoft.com/a/rmc.js"></script>
+    <script type="text/javascript">
+        function one(path,holder) {
+            rmc.AddXml("downloads", path, null, false);
+            rmc.AddXsl("odTransform", "peopleTransform.xsl");
+            var html = rmc.Transform(rmc.Xml.downloads.responseXML, rmc.Xsl.odTransform);
+            rmc.GE(holder).innerHTML = html;
+        }
+        function main() {
+            //one();
+        }
+        // Build RMC OData search
+        function Search() {
+            var e = rmc.GE("videoAmount");
+            var videoTerm = rmc.GE("videoTerm").value;
+            var query = "http://rmcodata.cloudapp.net/dataproxy.ashx?at=Videos&s="+escape(videoTerm)+"&a="+e.options[e.selectedIndex].value;
+            //var query = "http://odata.research.microsoft.com/odata.svc/Videos/?$filter=substringof('" + escape(videoTerm) + "', Description)&$top="+;
+            one(query, "searchResults");
+        }
+         window.onload = main;
+	</script> 
+     <style type="text/css">
+    body {background:black; font-family:Segoe UI, Verdana, Arial; 
+              color:white}
+    a:link {color:White; text-decoration:underline;}
+    a:visited {color:White; text-decoration:none;}
+    #headerText {background-color: #00AEEF; position: relative; margin-bottom: 6px; font: 18px Segoe UI, Verdana, Arial; color: white; padding: 5px 5px 5px 5px; overflow: hidden; text-align:center;}
+    #searchText {background-color: #FF0097; float:left; margin-right: 5px; padding: 5px 35px 5px 34px; text-align:center;}
+    #mapText {background-color: #0071BC; float:left; margin-right: 5px; padding: 5px 34px 5px 34px; text-align:center;}
+    #socialText {background-color: #FF8200; float:left; padding: 5px 36px 5px 34px; text-align:center;}   
+    #videos {background-color: #FF0097; float:left; margin-top: 6px; font: 16px Segoe UI, Verdana, Arial; padding-top:5px; padding-bottom:5px; text-align:center; width:100%;}
+    #form {float:left; margin-top:6px; margin-bottom: 6px;}
+    #videoTerm {height:21px; border-style: none}
+    #videoAmount {margin-left: 6px; height:23px;}
+    #btnSearch {height:25px;}
+    #searchResults {margin-top:10px; float:left;}
+    #footer {background-color:Black; color:White; font-size:x-small; float:left;}
+         .style4
+        {
+            width: 24px;
+            height: 25px;
+            border-style:none;
+        }
+        .style5
+        {
+            width: 25px;
+            height: 25px;
+            border-style:none;
+        }
+        .style6
+        {
+            width: 23px;
+            height: 25px;
+            border-style:none;
+        }
+    </style>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+<a href="default.htm" style="text-decoration:none">
+<div id="headerText">
+Microsoft Research | OData Sampler
+</div>
+</a>
+<div id="nav">
+    <a href="videos.htm" style="text-decoration:none";>
+        <div id="searchText">
+            &nbsp;<img alt="search videos" class="style4" 
+                src="MetroVideoIcon-xtrasmall.png" /></div>
+    </a>
+    <a href="labs.htm" style="text-decoration:none">
+         <div id="mapText">
+            &nbsp;<img alt="lab projects" class="style5" 
+                 src="MetroGlobalIcon-xtrasmall.png" /></div>
+    </a>
+    <a href="papers.htm" style="text-decoration:none">
+         <div id="socialText">
+             &nbsp;<img alt="top papers" class="style6" 
+                 src="MetroDocumentIcon2-xtrasmall.png" /></div>
+    </a>
+</div>
+<div id="videos">
+<label><strong>Search People</strong></label>
+</div>
+<div id="form">
+<input id="videoTerm" /> 
+<select id="videoAmount">
+    <option>5</option>
+    <option>10</option>
+    <option>15</option>
+</select>&nbsp;
+<button id="btnSearch" onclick="Search()">GO</button>
+</div>
+<div id="searchResults"></div>
+<div id="footer">
+<a href="http://mid.live.com/terms.aspx?mkt=en-us">Terms of Use</a> |
+<a href="http://m.microsoft.com/en-us/about/trademarks/trademarks.mspx">Trademarks</a> |
+<a href="http://m.microsoft.com/en-us/about/privacy/default.mspx">Privacy</a> <br />
+&#0169; 2012 Microsoft Corporation 
+</div>
+
+</body>
+
+</html>

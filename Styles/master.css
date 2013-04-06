@@ -1,0 +1,188 @@
+﻿body {background:white; font-family:Segoe UI, Verdana, Arial; color:white; font-size:100%;}
+    a:link, a:visited {text-decoration:none;}
+    #header {background:White; color:Black;}
+    #peopleHeader {background-color:#EB3C00; width:50%; height:100%; font-size:125%;}
+    #projectsHeader {background-color:#00BCF2; width:49%; height:100%; font-size:125%; margin-left: 1%;}
+    #publicationsHeader {background-color:#7FBA00; width:50%; height:90%; font-size:125%; margin-top: 1%;}
+    #videosHeader {background-color:#FFB900; width:49%; height:90%; font-size:125%; margin-top: 1%; margin-left: 1%;}
+    #footer {background:White; color:Black; text-align:center; float: left; font-size:x-small; margin:auto; width:100%;}
+    
+/* for 1920px or less */
+    @media screen and (max-width: 1920px) 
+    {
+        #header 
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: White; 
+            color: Black;
+            font-size: 36px;
+        }
+        #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader
+        {
+            color: Black;
+            background: White;
+            padding-bottom: 10px;
+        }
+        #people 
+        {
+            float: left;
+            width: 25%;
+            height: 980px;
+            background-color:#EB3C00;
+            font-size: 36px;
+        }
+        #projects 
+        {
+            display: block;
+            float: left;
+            width: 25%;
+            height: 980px;
+            background-color:#00BCF2;
+            font-size: 36px;
+        }
+        #publications
+        {
+            display: block;
+            float: left;
+            width: 25%;
+            height: 980px;
+            background-color: #7FBA00;
+            font-size: 36px;
+        }
+        #videos
+        {
+            display: block;
+            float: left;
+            width: 25%;
+            height: 980px;
+            background-color: #FFB900;
+            font-size: 36px;
+        }
+        #footer
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: Black;
+        }
+    }
+    
+/* for 1024px or less */
+    @media screen and (max-width: 1024px) 
+    {
+        #header 
+        {
+            height: 10%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background:White; 
+            color:Black;
+            font-size: 24px;
+        }
+        #people 
+        {
+            height: 20%;
+            background-color:#EB3C00;
+            font-size: 36px;
+        }
+        #projects 
+        {
+            height: 20%;
+            background-color:#00BCF2;
+            font-size: 36px;
+        }
+        #publications
+        {
+            background-color: #7FBA00;
+            font-size: 36px;
+        }
+        #videos
+        {
+            background-color: #FFB900;
+            font-size: 36px;
+        }
+        #peopleVideo, #projectsVideo, #publicationsVideo, #videosVideo
+        {
+            display: none;
+        }
+        #footer
+        {
+            height: 10%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 10px;
+            color: Black;
+        }
+    }
+        
+
+/* for 480px or less */
+    @media screen and (max-width: 480px) 
+    {
+        #header 
+        {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: #3D342B; 
+            color: White;
+            font-size: 18px;
+            text-align:center;
+        }
+        #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader
+        {
+         display: inline;
+         background-color: inherit;
+         color: White;
+        }
+        #people 
+        {
+            width: auto;
+            float: none;
+            height: 80px;
+            padding-top: 20px;
+            background-color:#EB3C00;
+            font-size: 36px;
+            text-align: center;
+        }
+        #projects 
+        {
+            width: auto;
+            float: none;
+            height: 80px;
+            padding-top: 20px;
+            background-color:#00BCF2;
+            font-size: 36px;
+            text-align: center;
+        }
+        #publications
+        {
+            width: auto;
+            float: none;
+            height: 80px;
+            padding-top: 20px;
+            background-color: #7FBA00;
+            font-size: 36px;
+            text-align: center;
+        }
+        #videos
+        {
+            width: auto;
+            float: none;
+            height: 80px;
+            padding-top: 20px;
+            background-color: #FFB900;
+            font-size: 36px;
+            text-align: center;
+        }
+        #footer
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 10px;
+            color: Black;
+            text-align: center;
+        }
+    }    
