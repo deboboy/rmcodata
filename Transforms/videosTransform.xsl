@@ -16,10 +16,23 @@
         <xsl:variable name="path">
           <xsl:value-of select="concat('http://msrvideo.vo.msecnd.net/rmcvideos/',$id,'/dl/',$id,'.mp4')" />
         </xsl:variable>
+	<xsl:variable name="FFpath">
+	  <xsl:value-of select="concat('http//msrvideo.vo.msecnd.net/rmcvideos/',$id,'/$id/',$id,'.asf')" />
+	<xsl:variable>
         <div id="videoContainer" style="position: relative; padding-top: 50%;">  
         <video controls="controls"  poster="{a:content/m:properties/d:Thumbnail}" 
                style="position: absolute; top: 0; left: 0; width: 100%; height: 100;">
           <source src="{$path}" type="video/mp4" />
+	  <object>
+	  	<param value="false" name="autoStart">
+		<param value="full" name="uimode">
+		<param value="{$FFpath}" name="url">
+		<param value="true" name="stretchtofit">
+		<embed width="320" height="314" autostart="false" showcontrols="true" name="mediaPlayer" 
+			pluginspage="http://microsoft.com/windows/mediaplayer/en/download/" 
+			type="application/x-mplayer2" 
+			src="{$FFpath}">
+	  </object>
           <a href="{$path}" alt="play video">
             <img src="{a:content/m:properties/d:Thumbnail}" />
           </a>
