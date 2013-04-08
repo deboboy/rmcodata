@@ -18,10 +18,10 @@
         <b>
           <xsl:value-of select="a:title"/>
         </b><br/>
-        <xsl:value-of select="a:author"/><br></br>
+        <xsl:value-of select="a:author"/></br>
         <xsl:value-of select="substring(a:published, 1, 10)"/><br/>
         <xsl:value-of disable-output-escaping="yes" select="substring(a:summary, 1, 200)"/>...
-        <p></p>
+        <br/>
         <xsl:if test="a:content/m:properties/d:FileName != ''">
           <a href="{a:content/m:properties/d:FileName}" style="color:Black; text-decoration: underline;">PDF</a>
           <br/>
