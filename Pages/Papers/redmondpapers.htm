@@ -7,7 +7,7 @@
 	<script type="text/javascript">
 	    function one() {
 	        //rmc.AddXml("downloads", "http://research.microsoft.com/en-us/um/people/fmartin/nosearch/dataproxy.ashx?l=Labs(47186)&r=Publications", null, false);
-            rmc.AddXml("downloads", "http://rmcodata.cloudapp.net/dataproxy2.ashx?l=Labs(47186)&r=Publications", null, false);
+            	rmc.AddXml("downloads", "http://rmcodata.azurewebsites.net/dataproxy2.ashx?l=Labs(47186)&r=Publications", null, false);
 	        rmc.AddXsl("odTransform", "/Transforms/papersTransform.xsl");
 	        rmc.GE("RMCODataOutput").innerHTML = rmc.Transform(rmc.Xml.downloads.responseXML, rmc.Xsl.odTransform);
 	    }
