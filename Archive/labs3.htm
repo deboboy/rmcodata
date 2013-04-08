@@ -1,0 +1,170 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Microsoft Research OData Sampler</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+<script src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../Scripts/jquery.ui.bmap.min.js"></script>
+<script type="text/javascript">
+$(function () {
+$('#map_canvas').gmap({ 'credentials': "Aqcn_xJ_YcufGqG6QMhpEUPXe4Azxypzley7qe_fsgXcnJ1tol_iHDX_suw8w8yg",
+bounds: Microsoft.Maps.LocationRect.fromLocations(new Microsoft.Maps.Location(47.6801, -122.121),
+new Microsoft.Maps.Location(32.162, 34.846),
+new Microsoft.Maps.Location(39.9289, 116.388)),
+mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+showDashboard: false,
+showMapTypeSelector: false,
+showScalebar: false,
+enableClickableLogo: false,
+enableSearchLogo: false,
+showCopyright: false
+});
+$('#map_canvas').gmap('addMarker', { 'location': '52.2, 0.1167', 'icon': "projects_sm.gif" }).click(function () {
+$('#map_canvas').gmap('openInfoWindow', { 'htmlContent': '<a href="http://rmcodata.cloudapp.net/cambridge.htm">Cambridge Projects</a>' }, this);
+$('#map_canvas').gmap('addMarker', { 'location': '32.162, 34.846', 'icon': "projects_sm.gif" }).click(function () {
+$('#map_canvas').gmap('openInfoWindow', { 'htmlContent': '<a href="http://odata.research.microsoft.com/odata.svc/Labs(152623)/Projects">Israel Projects</a>' }, this);
+$('#map_canvas').gmap('addMarker', { 'location': '39.9289, 116.388', 'icon': "projects_sm.gif" }).click(function () {
+$('#map_canvas').gmap('openInfoWindow', { 'htmlContent': '<a href="http://odata.research.microsoft.com/odata.svc/Labs(47181)/Projects">Asia Projects</a>' }, this);
+$('#map_canvas').gmap('addMarker', { 'location': '47.6801, -122.121', 'icon': "projects_sm.gif" }).click(function () {
+$('#map_canvas').gmap('openInfoWindow', { 'htmlContent': '<a href="http://rmc.cloudapp.net/redmond.htm">Redmond Projects</a>' }, this);
+$('#map_canvas').gmap('addMarker', { 'location': '12.9833, 77.5833', 'icon': "projects_sm.gif" }).click(function () {
+$('#map_canvas').gmap('openInfoWindow', { 'htmlContent': '<a href="http://odata.research.microsoft.com/odata.svc/Labs(47183)/Projects">India Projects</a>' }, this);
+$('#map_canvas').gmap('addMarker', { 'location': '37.4192, -122.057', 'icon': "projects_sm.gif" }).click(function () {
+$('#map_canvas').gmap('openInfoWindow', { 'htmlContent': '<a href="http://odata.research.microsoft.com/odata.svc/Labs(47187)/Projects">SVC Projects</a>' }, this);
+});
+$('#map_canvas').gmap('addMarker', { 'location': '42.3626, -71.0843', 'icon': "projects_sm.gif" }).click(function () {
+$('#map_canvas').gmap('openInfoWindow', { 'htmlContent': '<a href="http://odata.research.microsoft.com/odata.svc/Labs(47184)/Projects">New England Projects</a>' }, this);
+});
+});
+});
+});
+});
+});
+});
+</script>
+<style type="text/css">
+body {
+background: black;
+font-family: Segoe UI, Verdana, Arial;
+color:white;
+  		         }
+h2 {
+font-size: 20px;
+padding-bottom: 0px;
+}
+a:link {
+color: White;
+text-decoration: underline;
+}
+a:visited {
+color: White;
+text-decoration: none;
+}
+#header {
+  		             background-color: #00AEEF;
+  		             position: relative;
+  		             width: 237px;
+  		             margin-bottom: 6px;
+  		         }
+#headerText {
+  		             font: 20px Segoe UI;
+  		             color: white;
+  		             padding: 12px 0px 0px 9px;
+  		             margin-right: 6px;
+  		             overflow: hidden;
+  		         }
+#search {
+  		             background-color: #FF0097;
+  		             float: left;
+  		             width: 75px;
+  		             height: 36px;
+  		             margin-right: 6px;
+  		         }
+#searchText {
+  		             font: 10px Segoe UI;
+  		             color: white;
+  		             padding: 12px 0px 0px 9px;
+  		         }
+#map {
+  		             background-color: #0071BC;
+  		             float: left;
+  		             width: 75px;
+  		             height: 36px;
+  		             margin-right: 6px;
+  		         }
+#mapText {
+  		             font: 10px Segoe UI;
+  		             color: white;
+  		             padding: 12px 0px 0px 9px;
+  		         }
+#social {
+  		             background-color: #FF8200;
+  		             float: left;
+  		             width: 75px;
+  		             height: 36px;
+  		         }
+#socialText {
+  		             font: 10px Segoe UI;
+  		             color: white;
+  		             padding: 12px 0px 0px 9px;
+  		         }
+#content {
+  		             position: relative;
+top: 21px;
+left: -239px;
+  		         }
+#map_canvas {
+  		             width: 100%;
+  		             height: 250px;
+  		             float: left;
+  		         }
+#footer {
+  		             background-color: Black;
+  		             color: White;
+  		             font-size: x-small;
+  		             padding: 10px;
+  		             float: left;
+  		         }
+  		     </style>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+<div data-role="page"  data-theme="a" data-add-back-btn="true">
+<a href="default.htm" style="text-decoration:none">
+<div id="header">
+<div id="headerText">
+Microsoft Research OData Sampler
+</div>
+</div>
+</a>
+<div id="nav">
+<a href="search.htm" style="text-decoration:none";>
+<div id="search">
+<div id="searchText">Search Videos</div>
+</div>
+</a>
+<a href="" style="text-decoration:none">
+<div id="map">
+<div id="mapText">Labs Map</div>
+</div>
+</a>
+<a href="social.htm" style="text-decoration:none">
+<div id="social">
+<div id="socialText">Social</div>
+</div>
+</a>
+</div>
+<div data-role="content" id="content">
+<div id="map_canvas"></div>
+</div>
+<div id="footer"  style="margin-top:10px;">
+<a href="http://mid.live.com/terms.aspx?mkt=en-us">Terms of Use</a> |
+<a href="http://m.microsoft.com/en-us/about/trademarks/trademarks.mspx">Trademarks</a> |
+<a href="http://m.microsoft.com/en-us/about/privacy/default.mspx">Privacy</a> <br />
+&#0169; 2012 Microsoft Corporation 
+</div>
+</div>
+</body>
+</html>
