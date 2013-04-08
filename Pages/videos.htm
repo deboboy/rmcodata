@@ -20,7 +20,7 @@
         function Search() {
             var e = rmc.GE("videoAmount");
             var videoTerm = rmc.GE("videoTerm").value;
-            var query = "http://rmcodata.cloudapp.net/dataproxy.ashx?at=Videos&s="+escape(videoTerm)+"&a="+e.options[e.selectedIndex].value;
+            var query = "http://rmcodata.azurewebsites.net/dataproxy.ashx?at=Videos&s="+escape(videoTerm)+"&a="+e.options[e.selectedIndex].value;
             one(query, "searchResults");
         }
          window.onload = main;
