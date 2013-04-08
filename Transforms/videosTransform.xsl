@@ -23,7 +23,12 @@
         <video controls="controls"  poster="{a:content/m:properties/d:Thumbnail}" 
                style="position: absolute; top: 0; left: 0; width: 100%; height: 100;">
           <source src="{$path}" type="video/mp4" />
-	  <object>
+          <a href="{$path}" alt="play video">
+            <img src="{a:content/m:properties/d:Thumbnail}" />
+          </a>
+        </video>
+	<br/>
+	<object>
 		<param value="false" name="autoStart">
 		<param value="full" name="uimode">
 		<param value="{$FFpath}" name="url">
@@ -33,11 +38,6 @@
 		type="application/x-mplayer2" 
 		src="{$FFpath}">
 	  </object>
-
-          <a href="{$path}" alt="play video">
-            <img src="{a:content/m:properties/d:Thumbnail}" />
-          </a>
-        </video>
         </div>      
         <br/>
         <div>
