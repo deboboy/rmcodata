@@ -37,7 +37,7 @@
         Speaker: 
         Host: <xsl:value-of select="a:content/m:properties/d:MicrosoftHost"/><br/>
         Views: <xsl:value-of select="a:content/m:properties/d:Views"/><br/>
-        see more at <a href="{a:content/m:properties/d:Url}" style="color:Black; text-decoration: underline;">research.microsoft.com"</a><br/>
+        see more at <a href="{a:content/m:properties/d:Url}" style="color:Black; text-decoration: underline;">research.microsoft.com</a><br/>
       </div>
     </div>
     <p></p>
