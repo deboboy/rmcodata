@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="http://research.microsoft.com/a/rmc.js"></script>
     <script type="text/javascript">
         function one() {
-            rmc.AddXml("downloads", "http://rmcodata.cloudapp.net/dataproxy2.ashx?l=Labs(81480)&r=Users", null, false);
+            rmc.AddXml("downloads", "http://rmcodata.azurewebsites.net/dataproxy2.ashx?l=Labs(81480)&r=Users", null, false);
             rmc.AddXsl("odTransform", "/Transforms/peopleTransform.xsl");
             rmc.GE("RMCODataOutput").innerHTML = rmc.Transform(rmc.Xml.downloads.responseXML, rmc.Xsl.odTransform);
         }
