@@ -1,0 +1,76 @@
+﻿body {background: White; color: White; font-family: Segoe UI, Verdana, Arial;}
+a:link, a:visited {color: white; text-decoration: none;}
+#headerText {padding-bottom: 5px; color: white; overflow: hidden; position: relative; background: white; color: black;}
+#nav {width: 100%; margin: 0px; padding: 0px;}
+#videoSearch {width: 25%; float: left; background-color: #FFB900;}
+#labPeople {width: 25%; float: left; background-color: #EB3C00;}
+#labProjects {width: 25%; float: left; background-color: #00BCF2;}
+#labPapers {width: 25%; margin-right: 0px; float: left; background-color: #7FBA00;}
+#videoSearchHeader {margin: 0px; padding: 0px; background-color: #FFB900;}
+#form {width: 99%; margin-top: 5px; margin-bottom: 5px; float: left;}
+#videoTerm {width: 57%; vertical-align:top; height: 19px; margin-right: 0.5%;}
+#videoAmount {width: 17%; vertical-align:top; height: 25px; margin-right: 0.5%;}
+#btnSearch {width: 17%; vertical-align:top; height: 25px; margin-right: 0px;}
+#AsiaPeople, #CambridgePeople, #EuropePeople, #IndiaPeople, #IsraelPeople, #NewEnglandPeople, #RedmondPeople, #SVCPeople {background-color: #EB3C00;}
+#Asia, #Cambridge, #Europe, #India, #Israel, #NewEngland, #Redmond, #SVC {background-color: #7FBA00;}
+#AsiaProjects, #CambridgeProjects, #EuropeProjects, #IndiaProjects, #IsraelProjects, #NewEnglandProjects, #RedmondProjects, #SVCProjects {background-color: #00BCF2;}
+#searchResults {float: left; margin-top: 5px;}
+#RMCODataOutput {float: left;} 
+#footer {color: white; font-size: x-small; padding-top: 5px;}
+#peopleHeader {background-color: #EB3C00; margin: 0px;}
+#projectsHeader {background-color: #00BCF2;}
+#papersHeader {background-color: #7FBA00;}
+.Nav  {border-style:none; text-align: center; margin: 0px; padding-bottom: 5px;}
+.labsTop {width: 100%; margin: 0px; padding: 0px;}
+.labsBottom {width: 100%; margin: 0px; padding: 0px;}
+.labsList {width: 25%; height: 100%; float: left; font-size: 80%; text-align: center; padding-bottom: 5px; padding-top: 5px;}
+.resultsHeader {float: left; text-align: center; width: 100%; padding-bottom: 5px;}
+
+/* for 480px or less */
+    @media screen and (max-width: 480px) 
+    {
+        #header 
+        {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: #3D342B; 
+            color: White;
+            font-size: 18px;
+            text-align:center;
+        }
+        #AsiaPeople, #CambridgePeople, #EuropePeople, #IndiaPeople, #IsraelPeople, #NewEnglandPeople, #RedmondPeople, #SVCPeople 
+        {
+            width: 100%;
+            background-color:#EB3C00;
+            color: White;
+            font-size: 30px;
+            text-align:center;
+        }
+        #AsiaProjects, #CambridgeProjects, #EuropeProjects, #IndiaProjects, #IsraelProjects, #NewEnglandProjects, #RedmondProjects, #SVCProjects
+        {
+            width: 100%;
+            background-color: #00BCF2;
+            color: White;
+            font-size: 30px;
+            text-align:center;
+        }
+        #AsiaPapers, #CambridgePapers, #EuropePapers, #IndiaPapers, #IsraelPapers, #NewEnglandPapers, #RedmondPapers, #SVCPapers
+        {
+            width: 100%;
+            background-color: #7FBA00;
+            color: White;
+            font-size: 30px;
+            text-align:center;
+        }
+        #footer
+        {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 10px;
+            color: Black;
+            text-align:center;
+        }
+        
