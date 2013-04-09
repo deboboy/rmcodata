@@ -10,11 +10,15 @@
         // Build XML transform for RMC OData output 
         function one(path,holder) {
             rmc.AddXml("downloads", path, null, false);
-            rmc.AddXsl("odTransform", "/Transforms/videosTransform.xsl");
+            var cvv = rmc.Xml.downloads.responseXML;
+            cvv.documentElement.setAttribute("browserName", navigator.appName);
+            alert(navigator.appName);
+
             var html = rmc.Transform(rmc.Xml.downloads.responseXML, rmc.Xsl.odTransform);
             rmc.GE(holder).innerHTML = html;
         }
         function main() {
+            rmc.AddXsl("odTransform", "/Transforms/videosTransform.xsl");
         }
         // Build RMC OData search
         function Search() {
