@@ -20,49 +20,24 @@
         }
         #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader
         {
-            color: Black;
-            background: White;
-            padding-bottom: 10px;
+            display: none;
         }
-        #people 
+        #people, #projects, #publications, #videos 
         {
-            float: left;
-            width: 25%;
-            height: 980px;
-            background-color:#EB3C00;
-            font-size: 36px;
+            display: none;
         }
-        #projects 
+        #labsMap
         {
-            display: block;
-            float: left;
-            width: 25%;
-            height: 980px;
-            background-color:#00BCF2;
-            font-size: 36px;
-        }
-        #publications
-        {
-            display: block;
-            float: left;
-            width: 25%;
-            height: 980px;
-            background-color: #7FBA00;
-            font-size: 36px;
-        }
-        #videos
-        {
-            display: block;
-            float: left;
-            width: 25%;
-            height: 980px;
-            background-color: #FFB900;
-            font-size: 36px;
+            position: absolute;
+            width: 95%;
+            height: 85%;
+            border: #EB3C00 2px solid;
         }
         #footer
         {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            position:absolute;
+            bottom:0px;
+            margin: 0;
             color: Black;
         }
     }
