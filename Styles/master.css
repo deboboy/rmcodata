@@ -152,6 +152,10 @@
             font-size: 36px;
             text-align: center;
         }
+        #labsMap
+        {
+            display: none;
+        }
         #footer
         {
             margin-top: 10px;
