@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Microsoft Research OData Browser</title>
+    <title>Microsoft Research OData Sampler</title>
     <script charset="UTF-8" type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
     <script type="text/javascript">
         var map = null;
@@ -49,7 +49,6 @@
                 var pin7 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(32.1667, 34.8333), null);
                 map.entities.push(pin7);
                 map.entities.push(new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(32.1667, 34.8333), { title: 'Israel', titleClickHandler: titleClick7, pushpin: pin7 }));
-
             }
             });
     }
@@ -95,36 +94,13 @@
     #labsMap {top:90%; width:100%;}
     </style>
     
+
+	<link rel=StyleSheet href="../../Styles/pages.css" TYPE="text/css" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 <body>
-<a href="../default.htm"  style="text-decoration:none">
-<div id="header" class="Nav">Microsoft Research | OData Browser</div>
-</a>
-<div id="nav">
-    <a href="people.htm" style="text-decoration:none">
-         <div id="labPeople" class="Nav">
-         people
-         </div>
-    </a>
-    <a href="projects.htm" style="text-decoration:none">
-         <div id="labProjects" class="Nav">
-         projects
-         </div>
-    </a>
-    <a href="papers.htm" style="text-decoration:none">
-         <div id="labPapers" class="Nav">
-         papers
-         </div>
-    </a>
-    <a href="videos.htm" style="text-decoration:none";>
-        <div id="videoSearch" class="Nav">
-        videos
-        </div>
-    </a>
-</div>
-
-
+<div id="headerText">Microsoft Research | OData Browser</div>
+<p>.</p>
 <div id="labsMap"></div>
 </body>
 </html>
