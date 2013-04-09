@@ -1,8 +1,115 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<title>Microsoft Research | OData Browser</title>
+    <title>Microsoft Research | OData Browser</title>
     <link rel=StyleSheet href="/styles/master.css" TYPE="text/css" />
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script charset="UTF-8" type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0">
+    </script>
+    
+    <script type="text/javascript">
+        var map = null, infobox, dataLayer;
+
+        function GetMap() {
+            // Initialize the map
+            map = new Microsoft.Maps.Map(document.getElementById("labsMap"),
+                         { credentials: "Aqcn_xJ_YcufGqG6QMhpEUPXe4Azxypzley7qe_fsgXcnJ1tol_iHDX_suw8w8yg",
+                             showMapTypeSelector: false,
+                             mapTypeId: Microsoft.Maps.MapTypeId.road,
+                             center: new Microsoft.Maps.Location(52.2, 0.1167),
+                             showScalebar: false,
+                             showDashboard: false,
+                             zoom: 3
+                         });
+
+            dataLayer = new Microsoft.Maps.EntityCollection();
+            map.entities.push(dataLayer);
+
+            var infoboxLayer = new Microsoft.Maps.EntityCollection();
+            map.entities.push(infoboxLayer);
+
+            infobox = new Microsoft.Maps.Infobox(new Microsoft.Maps.Location(0, 0), { visible: false, offset: new Microsoft.Maps.Point(0, 20), width: 185, height: 150 });
+            infoboxLayer.push(infobox);
+
+            AddData();
+        }
+
+        function AddData() {
+            var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(52.2, 0.1167));
+            pin1.Title = "Microsoft Research Cambridge";
+            pin1.Description = '<a href="Pages/People/cambridgepeople.htm">People</a><br/>' +
+                    '<a href="Pages/Projects/cambridgeprojects.htm">Projects</a><br/>' +
+                    '<a href="Pages/Papers/cambridgepapers.htm">Publications</a><br/>' +
+                    '<a href="Pages/videos.htm">Videos</a>';
+            Microsoft.Maps.Events.addHandler(pin1, 'click', displayInfobox);
+            dataLayer.push(pin1);
+
+            var pin2 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(39.9289, 116.388));
+            pin2.Title = "Microsoft Research Asia";
+            pin2.Description = '<a href="Pages/People/asiapeople.htm">People</a><br/>' +
+                    '<a href="Pages/Projects/asiaprojects.htm">Projects</a><br/>' +
+                    '<a href="Pages/Papers/asiapapers.htm">Publications</a><br/>' +
+                    '<a href="Pages/videos.htm">Videos</a>'; 
+            Microsoft.Maps.Events.addHandler(pin2, 'click', displayInfobox);
+            dataLayer.push(pin2);
+
+            var pin3 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(12.9833, 77.5833));
+            pin3.Title = "Microsoft Research India";
+            pin3.Description = "people<br>projects<br>publications<br>videos";
+            Microsoft.Maps.Events.addHandler(pin3, 'click', displayInfobox);
+            dataLayer.push(pin3);
+
+            var pin4 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(42.3646, -71.1028));
+            pin4.Title = "Microsoft Research New England";
+            pin4.Description = "people<br>projects<br>publications<br>videos";
+            Microsoft.Maps.Events.addHandler(pin4, 'click', displayInfobox);
+            dataLayer.push(pin4);
+
+            var pin5 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(47.6801, -122.121));
+            pin5.Title = "Microsoft Research Redmond";
+            pin5.Description = '<a href="Pages/People/redmondpeople2.htm">People</a><br/>' +
+                    '<a href="Pages/Projects/redmondprojects.htm">Projects</a><br/>' +
+                    '<a href="Pages/Papers/redmondpapers.htm">Publications</a><br/>' +
+                    '<a href="Pages/videos.htm">Videos</a>';
+            Microsoft.Maps.Events.addHandler(pin5, 'click', displayInfobox);
+            dataLayer.push(pin5);
+
+            var pin6 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(37.4192, -122.057));
+            pin6.Title = "Microsoft Research Silicon Valley";
+            pin6.Description = "people<br>projects<br>publications<br>videos";
+            Microsoft.Maps.Events.addHandler(pin6, 'click', displayInfobox);
+            dataLayer.push(pin6);
+
+            var pin7 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(50.7708, 6.1053));
+            pin7.Title = "Advanced Technology Labs Europe";
+            pin7.Description = "people<br>projects<br>publications<br>videos";
+            Microsoft.Maps.Events.addHandler(pin7, 'click', displayInfobox);
+            dataLayer.push(pin7);
+
+            var pin8 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(32.1667, 34.8333));
+            pin8.Title = "Advanced Technology Labs Israel";
+            pin8.Description = "people<br>projects<br>publications<br>videos";
+            Microsoft.Maps.Events.addHandler(pin8, 'click', displayInfobox);
+            dataLayer.push(pin8);
+        }
+
+        
+        function displayInfobox(e) {
+            if (e.targetType == 'pushpin') {
+                infobox.setLocation(e.target.getLocation());
+                infobox.setOptions({ visible: true, title: e.target.Title, description: e.target.Description });
+            }
+        }  
+
+//        function testWidth() {
+//            var screenWidth = (screen.width > 1024) ? true : false;
+//            if (!screenWidth) { GetMap(); }
+//        }
+
+    </script>
+    
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
@@ -11,6 +118,7 @@
     <a href="/pages/projects.htm"><div id="projects"><div id="projectsHeader">projects</div></div></a>
     <a href="/pages/papers.htm"><div id="publications"><div id="publicationsHeader">papers</div></div></a>
     <a href="/pages/videos.htm"><div id="videos"><div id="videosHeader">videos</div></div></a>
+    <div id="labsMap"></div>
     <div id="footer">
     <a href="http://mid.live.com/terms.aspx?mkt=en-us">Terms of Use</a> | 
     <a href="http://m.microsoft.com/en-us/about/trademarks/trademarks.mspx">Trademarks</a> | 
