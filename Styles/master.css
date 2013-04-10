@@ -7,88 +7,7 @@
     #videosHeader {background-color:#FFB900; width:49%; height:90%; font-size:125%; margin-top: 1%; margin-left: 1%;}
     #footer {background:White; color:Black; text-align:center; float: left; font-size:x-small; margin:auto; width:100%;}
     
-/* for 1920px or less */
-    @media screen and (max-width: 1920px) 
-    {
-        #header 
-        {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background: White; 
-            color: Black;
-            font-size: 36px;
-        }
-        #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader
-        {
-            display: none;
-        }
-        #people, #projects, #publications, #videos 
-        {
-            display: none;
-        }
-        #labsMap
-        {
-            position: absolute;
-            width: 95%;
-            height: 85%;
-            border: #EB3C00 2px solid;
-        }
-        #footer
-        {
-            position:absolute;
-            bottom:0px;
-            margin: 0;
-            color: Black;
-        }
-    }
     
-/* for 1024px or less */
-    @media screen and (max-width: 1024px) 
-    {
-        #header 
-        {
-            height: 10%;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background:White; 
-            color:Black;
-            font-size: 24px;
-        }
-        #people 
-        {
-            height: 20%;
-            background-color:#EB3C00;
-            font-size: 36px;
-        }
-        #projects 
-        {
-            height: 20%;
-            background-color:#00BCF2;
-            font-size: 36px;
-        }
-        #publications
-        {
-            background-color: #7FBA00;
-            font-size: 36px;
-        }
-        #videos
-        {
-            background-color: #FFB900;
-            font-size: 36px;
-        }
-        #peopleVideo, #projectsVideo, #publicationsVideo, #videosVideo
-        {
-            display: none;
-        }
-        #footer
-        {
-            height: 10%;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-size: 10px;
-            color: Black;
-        }
-    }
         
 
 /* for 480px or less */
@@ -165,3 +84,87 @@
             text-align: center;
         }
     }    
+   
+/* for 1024px or less */
+    @media screen and (max-width: 1024px) 
+    {
+        #header 
+        {
+            height: 10%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background:White; 
+            color:Black;
+            font-size: 24px;
+        }
+        #people 
+        {
+            height: 20%;
+            background-color:#EB3C00;
+            font-size: 36px;
+        }
+        #projects 
+        {
+            height: 20%;
+            background-color:#00BCF2;
+            font-size: 36px;
+        }
+        #publications
+        {
+            background-color: #7FBA00;
+            font-size: 36px;
+        }
+        #videos
+        {
+            background-color: #FFB900;
+            font-size: 36px;
+        }
+        #peopleVideo, #projectsVideo, #publicationsVideo, #videosVideo
+        {
+            display: none;
+        }
+        #footer
+        {
+            height: 10%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 10px;
+            color: Black;
+        }
+    }
+
+/* for 1920px or less */
+    @media screen and (max-width: 1920px) 
+    {
+        #header 
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: White; 
+            color: Black;
+            font-size: 36px;
+        }
+        #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader
+        {
+            display: none;
+        }
+        #people, #projects, #publications, #videos 
+        {
+            display: none;
+        }
+        #labsMap
+        {
+            position: absolute;
+            width: 95%;
+            height: 85%;
+            border: #EB3C00 2px solid;
+        }
+        #footer
+        {
+            position:absolute;
+            bottom:0px;
+            margin: 0;
+            color: Black;
+        }
+    }
+
