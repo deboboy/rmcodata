@@ -14,7 +14,7 @@
       <div class="odata">
         <b><xsl:value-of select="a:title"/></b>
         <p></p>
-        <img src="{a:content/m:properties/d:Picture}" style="width:72px; height:72px;" onerror="this.src='http://research.microsoft.com/apps/dp/i/no_port.gif';"/>
+        <img src="{a:content/m:properties/d:Picture}" style="width:144px; height:144px; filter: grayscale(100%);" onerror="this.src='http://research.microsoft.com/apps/dp/i/no_port.gif';"/>
         <br/>
         <xsl:value-of select="a:content/m:properties/d:Title"/><p/>
         <xsl:value-of select="a:content/m:properties/d:ResearchAreas"/><br/>
