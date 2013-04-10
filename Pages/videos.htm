@@ -12,7 +12,7 @@
             rmc.AddXml("downloads", path, null, false);
             var cvv = rmc.Xml.downloads.responseXML;
             cvv.documentElement.setAttribute("browserName", navigator.appName);
-            alert(navigator.appName);
+            
 
             var html = rmc.Transform(rmc.Xml.downloads.responseXML, rmc.Xsl.odTransform);
             rmc.GE(holder).innerHTML = html;
