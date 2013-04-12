@@ -133,38 +133,3 @@
         }
     }
 
-/* for 1920px or less */
-    @media screen and (max-width: 1920px) 
-    {
-        #header 
-        {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background: White; 
-            color: Black;
-            font-size: 36px;
-        }
-        #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader
-        {
-            display: none;
-        }
-        #people, #projects, #publications, #videos 
-        {
-            display: none;
-        }
-        #labsMap
-        {
-            position: absolute;
-            width: 95%;
-            height: 85%;
-            border: #EB3C00 2px solid;
-        }
-        #footer
-        {
-            position:absolute;
-            bottom:0px;
-            margin: 0;
-            color: Black;
-        }
-    }
-
