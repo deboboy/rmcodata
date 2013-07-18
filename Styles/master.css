@@ -1,20 +1,39 @@
-﻿body {background:white; font-family:Segoe UI, Verdana, Arial; color:white; font-size:100%;}
-    a:link, a:visited {text-decoration:none;}
-    #header {background:White; color:Black;}
-    #peopleHeader {background-color:#EB3C00; width:50%; height:100%; font-size:125%;}
-    #projectsHeader {background-color:#00BCF2; width:49%; height:100%; font-size:125%; margin-left: 1%;}
-    #publicationsHeader {background-color:#7FBA00; width:50%; height:90%; font-size:125%; margin-top: 1%;}
-    #videosHeader {background-color:#FFB900; width:49%; height:90%; font-size:125%; margin-top: 1%; margin-left: 1%;}
-    #footer {background:White; color:Black; text-align:center; float: left; font-size:x-small; margin:auto; width:100%;}
-    
+/*
+CSS reset
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*
+These styles control the page color, font and color.
+*/
+body,
+html,
+div {
+     margin: 0;
+     padding:0;
+     font-family: 'Segoe UI', Verdana, Arial;
+     color:white;
+     font-size:100%;
+}
+a {text-decoration: none;}
+a:link {text-decoration: none;}
+a:visited {color: #E0E0E0;}
+#header {background:White; color:Black;}
+#peopleHeader {background-color:#EB3C00; width:50%; height:100%; font-size:125%;}
+#projectsHeader {background-color:#00BCF2; width:49%; height:100%; font-size:125%; margin-left: 1%;}
+#publicationsHeader {background-color:#7FBA00; width:50%; height:90%; font-size:125%; margin-top: 1%;}
+#videosHeader {background-color:#FFB900; width:49%; height:90%; font-size:125%; margin-top: 1%; margin-left: 1%;}
+#footer {background:White; color:Black; text-align:center; float: left; font-size:x-small; margin:auto; width:100%;}
     
         
 
 /* for 480px or less */
-    @media screen and (max-width: 480px) 
-    {
-        #header 
-        {
+    @media screen and (max-width: 480px) {
+        #header {
             width: 100%;
             height: auto;
             margin-bottom: 0;
@@ -25,14 +44,12 @@
             font-size: 18px;
             text-align:center;
         }
-        #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader
-        {
-         display: inline;
-         background-color: inherit;
-         color: White;
+        #peopleHeader, #projectsHeader, #publicationsHeader, #videosHeader {
+            display: inline;
+            background-color: inherit;
+            color: White;
         }
-        #people 
-        {
+        #people  {
             width: auto;
             float: none;
             height: 80px;
@@ -41,8 +58,7 @@
             font-size: 36px;
             text-align: center;
         }
-        #projects 
-        {
+        #projects {
             width: auto;
             float: none;
             height: 80px;
@@ -51,8 +67,7 @@
             font-size: 36px;
             text-align: center;
         }
-        #publications
-        {
+        #publications {
             width: auto;
             float: none;
             height: 80px;
@@ -61,8 +76,7 @@
             font-size: 36px;
             text-align: center;
         }
-        #videos
-        {
+        #videos  {
             width: auto;
             float: none;
             height: 80px;
@@ -71,12 +85,10 @@
             font-size: 36px;
             text-align: center;
         }
-        #labsMap
-        {
+        #labsMap {
             display: none;
         }
-        #footer
-        {
+        #footer {
             margin-top: 10px;
             margin-bottom: 10px;
             font-size: 10px;
@@ -86,10 +98,8 @@
     }    
    
 /* for 1024px or less */
-    @media screen and (max-width: 1024px) 
-    {
-        #header 
-        {
+    @media screen and (max-width: 1024px) {
+        #header {
             height: 10%;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -97,34 +107,28 @@
             color: White;
             font-size: 24px;
         }
-        #people 
-        {
+        #people {
             height: 20%;
             background-color:#EB3C00;
             font-size: 36px;
         }
-        #projects 
-        {
+        #projects {
             height: 20%;
             background-color:#00BCF2;
             font-size: 36px;
         }
-        #publications
-        {
+        #publications {
             background-color: #7FBA00;
             font-size: 36px;
         }
-        #videos
-        {
+        #videos {
             background-color: #FFB900;
             font-size: 36px;
         }
-        #peopleVideo, #projectsVideo, #publicationsVideo, #videosVideo
-        {
+        #peopleVideo, #projectsVideo, #publicationsVideo, #videosVideo {
             display: none;
         }
-        #footer
-        {
+        #footer {
             height: 10%;
             margin-top: 10px;
             margin-bottom: 10px;
